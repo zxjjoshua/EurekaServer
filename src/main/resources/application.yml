@@ -4,10 +4,20 @@
 #    fetchRegistry: false
 #server:
 #  port: 8761
+spring:
+  profiles:
+    active: prod
 
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
 
 server:
   port: 3000
+
 eureka:
   instance:
     hostname: eureka-center
@@ -18,6 +28,30 @@ eureka:
     serviceUrl:
       defaultZone: http://test:123456@localhost:3000/eureka
 #      defaultZone: http://localhost:3000/eureka
+  server:
+    enableSelfPreservation: false
+    evictionIntervalTimerInMs: 4000
+
+
+---
+server:
+  port: 4000
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+eureka:
+  instance:
+    hostname: eureka-center
+    appname: register-center
+  client:
+    registerWithEureka: false # 单点的时候设置为 false 禁止注册自身
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://test:123456@18.191.146.215:4000/eureka
+  #      defaultZone: http://localhost:3000/eureka
   server:
     enableSelfPreservation: false
     evictionIntervalTimerInMs: 4000
