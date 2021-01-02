@@ -35,7 +35,7 @@ eureka:
 
 ---
 server:
-  port: 4000
+  port: 3000
 
 spring:
   config:
@@ -50,7 +50,7 @@ eureka:
     registerWithEureka: false # 单点的时候设置为 false 禁止注册自身
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://test:123456@18.191.146.215:4000/eureka
+      defaultZone: http://test:123456@18.191.146.215:3000/eureka
   #      defaultZone: http://localhost:3000/eureka
   server:
     enableSelfPreservation: false
