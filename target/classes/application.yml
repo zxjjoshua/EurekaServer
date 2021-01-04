@@ -6,7 +6,7 @@
 #  port: 8761
 spring:
   profiles:
-    active: prod
+    active: dev
 
 
 ---

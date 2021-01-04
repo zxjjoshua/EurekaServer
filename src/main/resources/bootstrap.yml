@@ -11,5 +11,5 @@ spring:
         - docker0
         - veth.*
         - VM.*
-      preferredNetworks:  ## 优先的网段
-        - 192.168
+#      preferredNetworks:  ## 优先的网段
+#        - 192.168
