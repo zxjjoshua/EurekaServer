@@ -24,7 +24,7 @@ eureka:
     appname: register-center
   client:
     registerWithEureka: false # 单点的时候设置为 false 禁止注册自身
-    fetchRegistry: false
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://test:123456@localhost:3000/eureka
 #      defaultZone: http://localhost:3000/eureka
